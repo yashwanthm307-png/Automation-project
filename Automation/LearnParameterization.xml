@@ -1,0 +1,17 @@
+<suite name="Suite" parallel="tests">
+ <parameter name="url" value="http://localhost/login.do"/>
+  <test thread-count="5" name="TestA">
+  <parameter name="un" value="admin"/>
+  <parameter name="pwd" value="manager"/>
+    <classes>
+      <class name="datadriventesting.ActitimeLogin"/>
+    </classes>
+  </test> 
+   <test thread-count="5" name="TestB">
+  <parameter name="un" value="manager"/>
+  <parameter name="pwd" value="admin"/>
+    <classes>
+      <class name="datadriventesting.ActitimeLogin"/>
+    </classes>
+  </test>
+</suite> 
